@@ -1,0 +1,106 @@
+{
+  "categorias": [
+    {
+      "id": "mechanical",
+      "nombre": "Sistema mecánico y transmisión",
+      "repuestos": [
+        { "id": "mechanical-01", "nombre": "Rodamientos de Rodillos Cónicos / Bolas de Contacto Angular", "descripcion": "Soportan cargas radiales y axiales en ejes rotativos.", "vidaUtilAproximada": 20000 },
+        { "id": "mechanical-02", "nombre": "Correas Sincrónicas Dentadas (Perfil HTD / STD)", "descripcion": "Transmiten potencia entre poleas sin deslizamiento.", "vidaUtilAproximada": 8000 },
+        { "id": "mechanical-03", "nombre": "Cadena de Transmisión de Rodillos de Precisión (Norma ISO 606 / ANSI B29.1)", "descripcion": "Transmite movimiento y potencia mediante eslabones y piñones.", "vidaUtilAproximada": 15000 },
+        { "id": "mechanical-04", "nombre": "Poleas de Garganta Trapezoidal / Ranura Sincrónica", "descripcion": "Guían correas trapezoidales o dentadas en transmisiones.", "vidaUtilAproximada": 25000 },
+        { "id": "mechanical-05", "nombre": "Ruedas Dentadas para Cadena (Piñones de Ataque DIN 8187)", "descripcion": "Engranan con cadenas de rodillos para transmitir movimiento.", "vidaUtilAproximada": 15000 },
+        { "id": "mechanical-06", "nombre": "Acoplamientos de Flexión Elastomérica (Elemento Flexible de Estrella / Spider)", "descripcion": "Conectan ejes y amortiguan vibraciones y desalineaciones leves.", "vidaUtilAproximada": 20000 },
+        { "id": "mechanical-07", "nombre": "Husillo de Bolas Recirculantes de Alta Precisión (ISO 3408)", "descripcion": "Convierte el giro en desplazamiento lineal de precisión.", "vidaUtilAproximada": 20000 },
+        { "id": "mechanical-08", "nombre": "Tuerca Metálica / Polimérica de Traslación (Anti-Backlash)", "descripcion": "Permite el avance lineal del husillo y reduce el juego.", "vidaUtilAproximada": 12000 },
+        { "id": "mechanical-09", "nombre": "Guías Lineales de Bolas / Rodillos y Patines de Recirculación", "descripcion": "Soportan y guían desplazamientos lineales de maquinaria.", "vidaUtilAproximada": 20000 },
+        { "id": "mechanical-10", "nombre": "Reductores de Velocidad Planetarios / Helicoidales Coaxiales", "descripcion": "Reducen velocidad y transmiten par entre el motor y la carga.", "vidaUtilAproximada": 40000 },
+        { "id": "mechanical-11", "nombre": "Ejes Cardán / Juntas Universales de Transmisión (DIN 808)", "descripcion": "Transmiten rotación entre ejes con cierta desalineación angular.", "vidaUtilAproximada": 18000 },
+        { "id": "mechanical-12", "nombre": "Bujes Autolubricados / Cojinetes de Deslizamiento (Sinterizado / PTFE)", "descripcion": "Reducen fricción en apoyos de movimiento deslizante.", "vidaUtilAproximada": 12000 },
+        { "id": "mechanical-13", "nombre": "Embrague Electromagnético Mono/Multidisco", "descripcion": "Acopla o desacopla la transmisión mediante accionamiento eléctrico.", "vidaUtilAproximada": 12000 },
+        { "id": "mechanical-14", "nombre": "Discos de Freno Industrial de Par Cero (Neumático / Electromagnético)", "descripcion": "Frenan o mantienen inmóviles ejes en equipos industriales.", "vidaUtilAproximada": 10000 },
+        { "id": "mechanical-15", "nombre": "Pastillas de Fricción Material Orgánico / Semimetálico", "descripcion": "Generan fricción contra el disco para desacelerar el equipo.", "vidaUtilAproximada": 4000 }
+      ]
+    },
+    {
+      "id": "sealing",
+      "nombre": "Estanqueidad, sellado y fluidos",
+      "repuestos": [
+        { "id": "sealing-01", "nombre": "Retenes Radiales para Ejes Rotativos (DIN 3760 / ISO 6194)", "descripcion": "Limitan fugas de lubricante y entrada de contaminantes en ejes.", "vidaUtilAproximada": 8000 },
+        { "id": "sealing-02", "nombre": "Juntas Tóricas de Estanqueidad Elastomérica (O-Rings DIN ISO 3601)", "descripcion": "Sellan uniones estáticas o dinámicas en circuitos y equipos.", "vidaUtilAproximada": 6000 },
+        { "id": "sealing-03", "nombre": "Empaquetaduras Métricas para Vástago y Pistón (Chevron / U-Cup)", "descripcion": "Sellan vástagos y pistones en cilindros hidráulicos o neumáticos.", "vidaUtilAproximada": 5000 },
+        { "id": "sealing-04", "nombre": "Cartuchos Filtrantes de Microfibra de Aceite (ISO 4572)", "descripcion": "Retienen partículas contaminantes del aceite de lubricación.", "vidaUtilAproximada": 2000 },
+        { "id": "sealing-05", "nombre": "Elementos Filtrantes de Admisión de Aire Industrial", "descripcion": "Retienen polvo y partículas del aire que ingresa al equipo.", "vidaUtilAproximada": 3000 },
+        { "id": "sealing-06", "nombre": "Filtros Separadores Coalescentes Aire/Aceite", "descripcion": "Separan aerosoles de aceite y humedad de corrientes de aire.", "vidaUtilAproximada": 4000 },
+        { "id": "sealing-07", "nombre": "Válvulas de Evacuación Automática de Condensado (Capacitivas / Temporizadas)", "descripcion": "Drenan condensado de depósitos y líneas de aire comprimido.", "vidaUtilAproximada": 10000 }
+      ]
+    },
+    {
+      "id": "hydraulic",
+      "nombre": "Sistemas neumáticos e hidráulicos",
+      "repuestos": [
+        { "id": "hydraulic-01", "nombre": "Mangueras Hidráulicas de Alta Presión (Normas SAE 100R2 / EN 853)", "descripcion": "Conducen fluido hidráulico a presión entre componentes.", "vidaUtilAproximada": 10000 },
+        { "id": "hydraulic-02", "nombre": "Kits de Sellado Interno para Cilindros Hidráulicos/Neumáticos", "descripcion": "Restablecen la estanqueidad interna de cilindros.", "vidaUtilAproximada": 8000 },
+        { "id": "hydraulic-03", "nombre": "Electroválvulas Direccionales de Válvula Corredera (ISO 5599)", "descripcion": "Dirigen el flujo de aire o fluido mediante accionamiento eléctrico.", "vidaUtilAproximada": 20000 },
+        { "id": "hydraulic-04", "nombre": "Impulsores y Sellos Mecánicos para Bombas Centrífugas/Rotativas", "descripcion": "Impulsan fluidos y evitan fugas en el eje de la bomba.", "vidaUtilAproximada": 15000 },
+        { "id": "hydraulic-05", "nombre": "Anillos Rascadores de Vástago (Wiper Seals)", "descripcion": "Retiran contaminantes del vástago antes de su entrada al cilindro.", "vidaUtilAproximada": 8000 },
+        { "id": "hydraulic-06", "nombre": "Conectores Rápidos de Obturación Automática", "descripcion": "Conectan líneas de fluido y limitan derrames al desacoplar.", "vidaUtilAproximada": 12000 },
+        { "id": "hydraulic-07", "nombre": "Unidades de Tratamiento de Aire Comprimido (FRL: Filtro, Regulador, Lubricador)", "descripcion": "Filtran, regulan y acondicionan el aire para sistemas neumáticos.", "vidaUtilAproximada": 15000 },
+        { "id": "hydraulic-08", "nombre": "Membranas / Vejigas Elastoméricas para Acumuladores Hidráulicos", "descripcion": "Separan el gas del fluido y almacenan energía hidráulica.", "vidaUtilAproximada": 10000 }
+      ]
+    },
+    {
+      "id": "electrical",
+      "nombre": "Sistemas eléctricos, electrónicos y control",
+      "repuestos": [
+        { "id": "electrical-01", "nombre": "Escobillas Electro-Grafíticas de Conmutación", "descripcion": "Conducen corriente entre partes fijas y rotativas de motores.", "vidaUtilAproximada": 5000 },
+        { "id": "electrical-02", "nombre": "Contactores de Potencia Industrial (Categoría IEC AC-3 / AC-4)", "descripcion": "Conmutan cargas eléctricas de motores y maquinaria.", "vidaUtilAproximada": 15000 },
+        { "id": "electrical-03", "nombre": "Relés Térmicos Bimetálicos de Sobrecarga", "descripcion": "Protegen motores frente a sobrecargas prolongadas.", "vidaUtilAproximada": 20000 },
+        { "id": "electrical-04", "nombre": "Cables de Cadena Articulada de Alta Flexibilidad (Servo/Fieldbus)", "descripcion": "Transmiten energía y señales en movimientos repetitivos.", "vidaUtilAproximada": 30000 },
+        { "id": "electrical-05", "nombre": "Sensores Inductivos / Capacitivos de Proximidad (IEC 60947-5-2)", "descripcion": "Detectan la presencia o posición de objetos sin contacto.", "vidaUtilAproximada": 20000 },
+        { "id": "electrical-06", "nombre": "Encoders Incrementales / Absolutos (Rotativos / Lineales)", "descripcion": "Miden posición y movimiento para sistemas de control.", "vidaUtilAproximada": 20000 },
+        { "id": "electrical-07", "nombre": "Interruptores de Posición Mecánicos (Limit Switches DIN EN 50041)", "descripcion": "Detectan límites de recorrido mediante accionamiento mecánico.", "vidaUtilAproximada": 15000 },
+        { "id": "electrical-08", "nombre": "Fusibles de Ultra-Rapidez para Protección de Semiconductores (aR / gR)", "descripcion": "Interrumpen sobrecorrientes para proteger semiconductores de potencia.", "vidaUtilAproximada": 5000 },
+        { "id": "electrical-09", "nombre": "Electroválvulas y Electroventiladores de Cojinete de Levitación / Rodamiento (IP54/IP65)", "descripcion": "Accionan válvulas o proporcionan ventilación en equipos industriales.", "vidaUtilAproximada": 20000 },
+        { "id": "electrical-10", "nombre": "Baterías de Respaldo de Litio-Cloruro de Tionilo (Li-SOCl2)", "descripcion": "Mantienen alimentación de respaldo en instrumentación y control.", "vidaUtilAproximada": 40000 }
+      ]
+    },
+    {
+      "id": "thermal",
+      "nombre": "Elementos térmicos y calentamiento",
+      "repuestos": [
+        { "id": "thermal-01", "nombre": "Resistencias Calefactoras Blindadas (Cartucho / Banda Cero Pérdidas)", "descripcion": "Generan calor para procesos y equipos industriales.", "vidaUtilAproximada": 20000 },
+        { "id": "thermal-02", "nombre": "Termopares (Tipo J/K) y Termorresistencias (Pt100 / Pt1000)", "descripcion": "Miden temperatura para supervisión y control de procesos.", "vidaUtilAproximada": 10000 },
+        { "id": "thermal-03", "nombre": "Relés de Estado Sólido (SSR) con Conmutación por Paso por Cero", "descripcion": "Conmutan cargas eléctricas de calefacción sin contactos mecánicos.", "vidaUtilAproximada": 30000 },
+        { "id": "thermal-04", "nombre": "Empaques de Estanqueidad y Placas para Intercambiadores Térmicos", "descripcion": "Sellan y transfieren calor entre circuitos de un intercambiador.", "vidaUtilAproximada": 20000 }
+      ]
+    },
+    {
+      "id": "machining",
+      "nombre": "Mecanizados, utillaje y desgaste",
+      "repuestos": [
+        { "id": "machining-01", "nombre": "Cuchillas de Corte Acero Rápido (HSS) / Carburo de Tungsteno (HM)", "descripcion": "Cortan o mecanizan materiales en procesos industriales.", "vidaUtilAproximada": 4000 },
+        { "id": "machining-02", "nombre": "Boquillas de Aspersión y Nebulización de Orificio Calibrado", "descripcion": "Dosifican y distribuyen líquidos o aire en forma de aspersión.", "vidaUtilAproximada": 8000 },
+        { "id": "machining-03", "nombre": "Bandas Transportadoras Modulares Poliméricas / Vulcanizadas", "descripcion": "Transportan productos y materiales entre etapas de proceso.", "vidaUtilAproximada": 10000 },
+        { "id": "machining-04", "nombre": "Placas de Desgaste de Bronce al Aluminio / PTFE Sinterizado", "descripcion": "Protegen superficies sometidas a fricción y abrasión.", "vidaUtilAproximada": 20000 },
+        { "id": "machining-05", "nombre": "Insertos de Corte Intercambiables (Plaquitas ISO de Metal Duro)", "descripcion": "Realizan operaciones de corte en herramientas de mecanizado.", "vidaUtilAproximada": 1000 },
+        { "id": "machining-06", "nombre": "Rodillos Elastomerizados (Elastómero Poliuretano / Silicona HCR)", "descripcion": "Transportan, presionan o guían productos mediante una superficie elastomérica.", "vidaUtilAproximada": 10000 },
+        { "id": "machining-07", "nombre": "Ventosas de Manipulación por Vacío (Nitrilo / Silicona Fluorada)", "descripcion": "Sujetan y manipulan piezas mediante presión de vacío.", "vidaUtilAproximada": 4000 },
+        { "id": "machining-08", "nombre": "Pinzas de Agarre / Efectores Finales de Sujeción Neumática", "descripcion": "Agarran y posicionan piezas en sistemas automatizados.", "vidaUtilAproximada": 15000 },
+        { "id": "machining-09", "nombre": "Pasadores Expulsores Rectificados y Nitrurados para Moldes", "descripcion": "Expulsan piezas de moldes durante el ciclo de fabricación.", "vidaUtilAproximada": 10000 },
+        { "id": "machining-10", "nombre": "Punzones y Matrices de Estampación (Acero AISI D2/M2)", "descripcion": "Cortan o conforman material en operaciones de estampación.", "vidaUtilAproximada": 5000 },
+        { "id": "machining-11", "nombre": "Chavetas Expansivas Neumáticas para Mandriles Devanadores", "descripcion": "Fijan bobinas y rollos en mandriles mediante expansión neumática.", "vidaUtilAproximada": 12000 }
+      ]
+    },
+    {
+      "id": "structure",
+      "nombre": "Amortiguación, estructura y seguridad",
+      "repuestos": [
+        { "id": "structure-01", "nombre": "Aisladores Antivibratorios Elastoméricos / Silentblocks (DIN 95410)", "descripcion": "Aíslan vibraciones y reducen su transmisión a la estructura.", "vidaUtilAproximada": 15000 },
+        { "id": "structure-02", "nombre": "Amortiguadores Industriales Hidráulicos Regulables de Deformación", "descripcion": "Disipan energía cinética y reducen impactos en maquinaria.", "vidaUtilAproximada": 15000 },
+        { "id": "structure-03", "nombre": "Protecciones Telescópicas de Chapa / Fuelles de Protección Flexibles", "descripcion": "Protegen guías y mecanismos frente a polvo, virutas y salpicaduras.", "vidaUtilAproximada": 20000 },
+        { "id": "structure-04", "nombre": "Muelles de Compresión de Alta Capacidad (DIN 2098 / ISO 10243)", "descripcion": "Almacenan y liberan energía para soportar cargas y movimientos.", "vidaUtilAproximada": 30000 },
+        { "id": "structure-05", "nombre": "Silenciadores de Neumática de Metal Sinterizado (Bronce / Inox)", "descripcion": "Reducen el ruido del escape de aire en válvulas y actuadores.", "vidaUtilAproximada": 12000 }
+      ]
+    }
+  ]
+}

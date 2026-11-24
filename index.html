@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#26352b">
+  <meta name="description" content="Plataforma de evaluación de vida útil y decisión de reemplazo de componentes mecánicos.">
+  <title>LiveCycle | Ingeniería de confiabilidad</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <section class="auth-screen" id="auth-screen" aria-labelledby="auth-title">
+    <div class="auth-card">
+      <a class="brand auth-brand" href="#inicio" aria-label="LiveCycle">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 42 42" fill="none"><path d="M21 4.5 36 13v16L21 37.5 6 29V13L21 4.5Z" stroke="currentColor" stroke-width="2"/><path d="M13.5 24.5c2-7.5 5.2-11 9.5-11 4.1 0 6.3 2.4 6.3 5.3 0 3.2-2.6 5-6.1 5h-4.1c-2.6 0-4.1 1-4.1 3.1 0 2 1.8 3.4 4.6 3.4 2.4 0 4.6-.9 6.4-2.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </span>
+        <span class="brand-copy"><strong>LiveCycle</strong><small>INGENIERÍA DE CONFIABILIDAD</small></span>
+      </a>
+      <div class="auth-heading">
+        <div class="eyebrow dark-eyebrow"><span class="eyebrow-line"></span> ACCESO A LA PLATAFORMA</div>
+        <h1 id="auth-title">Inicia sesión</h1>
+        <p id="auth-description">Ingresa tu nombre, cédula y contraseña.</p>
+      </div>
+      <form class="auth-form" id="login-form">
+        <label class="field">Nombre completo
+          <input name="name" type="text" required minlength="2" maxlength="100" autocomplete="name" placeholder="Ej. María Rodríguez">
+        </label>
+        <label class="field">Cédula
+          <input name="idNumber" type="text" required minlength="6" pattern="[0-9]{6,12}" inputmode="numeric" autocomplete="username" placeholder="Ej. 18452731" aria-describedby="id-format">
+          <small id="id-format">Solo dígitos, entre 6 y 12 caracteres.</small>
+        </label>
+        <label class="field">Contraseña
+          <input name="password" type="password" required minlength="8" autocomplete="current-password" placeholder="Mínimo 8 caracteres">
+        </label>
+        <p class="auth-message" id="login-message" role="alert" hidden></p>
+        <button class="button button-primary auth-submit" type="submit">Entrar <span aria-hidden="true">→</span></button>
+        <p class="auth-switch">¿Aún no tienes cuenta? <button class="auth-link" id="show-register" type="button">Regístrate aquí</button></p>
+      </form>
+      <form class="auth-form" id="register-form" hidden>
+        <label class="field">Nombre completo
+          <input name="name" type="text" required minlength="2" maxlength="100" autocomplete="name" placeholder="Ej. María Rodríguez">
+        </label>
+        <label class="field">Cédula
+          <input name="idNumber" type="text" required minlength="6" pattern="[0-9]{6,12}" inputmode="numeric" autocomplete="username" placeholder="Ej. 18452731" aria-describedby="register-id-format">
+          <small id="register-id-format">Solo dígitos, entre 6 y 12 caracteres.</small>
+        </label>
+        <label class="field">Contraseña
+          <input name="password" type="password" required minlength="8" autocomplete="new-password" placeholder="Mínimo 8 caracteres">
+        </label>
+        <p class="auth-message" id="register-message" role="alert" hidden></p>
+        <button class="button button-primary auth-submit" type="submit">Crear cuenta <span aria-hidden="true">→</span></button>
+        <p class="auth-switch">¿Ya tienes cuenta? <button class="auth-link" id="show-login" type="button">Volver al acceso</button></p>
+      </form>
+      <p class="auth-storage-note">Contraseñas con hash; los datos se guardan en este navegador.</p>
+    </div>
+  </section>
+
+  <header class="site-header" hidden>
+    <a class="brand" href="#inicio" aria-label="LiveCycle, inicio">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 42 42" fill="none"><path d="M21 4.5 36 13v16L21 37.5 6 29V13L21 4.5Z" stroke="currentColor" stroke-width="2"/><path d="M13.5 24.5c2-7.5 5.2-11 9.5-11 4.1 0 6.3 2.4 6.3 5.3 0 3.2-2.6 5-6.1 5h-4.1c-2.6 0-4.1 1-4.1 3.1 0 2 1.8 3.4 4.6 3.4 2.4 0 4.6-.9 6.4-2.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </span>
+      <span class="brand-copy"><strong>LiveCycle</strong><small>INGENIERÍA DE CONFIABILIDAD</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a class="nav-link" href="#dashboard">Dashboard</a>
+      <a class="nav-link active" href="#evaluador" aria-current="page">Evaluador de piezas</a>
+      <a class="nav-link" href="#catalogo">Catálogo de repuestos</a>
+      <a class="nav-link" href="#historial">Historial de auditoría</a>
+      <a class="nav-link" href="#reportes">Reportes</a>
+      <a class="nav-link" href="#areas">Áreas</a>
+    </nav>
+    <div class="header-actions">
+      <div class="system-status"><span class="status-pulse"></span><span>Sistema operativo</span></div>
+      <button class="profile-button" id="profile-open" type="button" aria-label="Editar perfil del técnico">
+        <span class="avatar" id="header-avatar">MR</span>
+        <span class="profile-name"><strong id="header-name">María Rodríguez</strong><small id="header-role">Técnica · Turno A</small></span>
+        <svg class="chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
+      </button>
+      <button class="logout-button" id="logout-button" type="button">Salir</button>
+    </div>
+  </header>
+
+  <main hidden>
+    <section class="dashboard-section" id="dashboard" data-module="dashboard" hidden>
+      <div class="section-heading compact-heading">
+        <div><div class="eyebrow dark-eyebrow"><span class="eyebrow-line"></span> RESUMEN OPERATIVO</div><h2>Dashboard global</h2><p>Métricas agregadas de las evaluaciones guardadas en este navegador.</p></div>
+        <button class="button button-primary dashboard-cta" id="dashboard-evaluate" type="button">Nueva evaluación <span aria-hidden="true">→</span></button>
+      </div>
+      <div class="metric-grid" aria-live="polite">
+        <article class="metric-card"><span>Evaluaciones registradas</span><strong id="metric-total">0</strong><small>En todas las cuentas de este navegador</small></article>
+        <article class="metric-card"><span>Reemplazo inmediato</span><strong id="metric-critical">0</strong><small>Evaluaciones con condición crítica</small></article>
+        <article class="metric-card"><span>Vida restante promedio</span><strong id="metric-average">—</strong><small>Porcentaje de vida estimada</small></article>
+        <article class="metric-card"><span>Equipos evaluados</span><strong id="metric-machines">0</strong><small>Área y máquina únicas</small></article>
+      </div>
+      <p class="area-message" id="dashboard-message" role="alert" hidden></p>
+      <section class="dashboard-recent" aria-labelledby="dashboard-recent-title">
+        <div class="dashboard-subheading"><h3 id="dashboard-recent-title">Evaluaciones recientes</h3><button class="text-button" id="dashboard-history" type="button">Ver historial →</button></div>
+        <div class="table-wrap">
+          <table class="audit-table"><thead><tr><th>FECHA Y HORA</th><th>COMPONENTE</th><th>ÁREA · MÁQUINA</th><th>DICTAMEN</th><th>VIDA RESTANTE</th></tr></thead><tbody id="dashboard-rows"></tbody></table>
+          <p class="empty-history" id="dashboard-empty">Aún no hay evaluaciones registradas.</p>
+        </div>
+      </section>
+    </section>
+
+    <section class="hero" id="inicio" data-module="evaluador">
+      <div class="hero-content">
+        <div class="eyebrow"><span class="eyebrow-line"></span> DECISIONES BASADAS EN CONDICIÓN</div>
+        <h1>Más vida útil.<br><span>Menos incertidumbre.</span></h1>
+        <p>Evita reemplazos prematuros y anticipa fallas críticas por fatiga de materiales. Evalúa cada componente con datos claros y criterio técnico.</p>
+        <a class="button button-primary hero-cta" href="#evaluador">Evaluar componente <span aria-hidden="true">→</span></a>
+        <div class="hero-assurance"><span class="assurance-icon">✓</span> Evaluación rápida <span class="assurance-divider"></span> Trazabilidad por activo <span class="assurance-divider"></span> Criterio auditable</div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-label">MONITOREO DE ACTIVOS <span>● EN LÍNEA</span></div>
+        <div class="orbital orbital-one"></div><div class="orbital orbital-two"></div>
+        <div class="gear gear-large"><svg viewBox="0 0 200 200" fill="none"><path d="M85 12h30l5 19a72 72 0 0 1 15 6l16-11 21 21-11 16a72 72 0 0 1 6 15l19 5v30l-19 5a72 72 0 0 1-6 15l11 16-21 21-16-11a72 72 0 0 1-15 6l-5 19H85l-5-19a72 72 0 0 1-15-6l-16 11-21-21 11-16a72 72 0 0 1-6-15l-19-5V83l19-5a72 72 0 0 1 6-15L34 47l21-21 16 11a72 72 0 0 1 15-6l-1-19Z" stroke="currentColor" stroke-width="9"/><circle cx="100" cy="98" r="37" stroke="currentColor" stroke-width="9"/><circle cx="100" cy="98" r="11" fill="currentColor"/></svg></div>
+        <div class="gear gear-small"><svg viewBox="0 0 120 120" fill="none"><path d="M50 7h20l3 12a42 42 0 0 1 9 4l10-7 14 14-7 10a42 42 0 0 1 4 9l12 3v20l-12 3a42 42 0 0 1-4 9l7 10-14 14-10-7a42 42 0 0 1-9 4l-3 12H50l-3-12a42 42 0 0 1-9-4l-10 7-14-14 7-10a42 42 0 0 1-4-9L5 62V42l12-3a42 42 0 0 1 4-9l-7-10 14-14 10 7a42 42 0 0 1 9-4L50 7Z" stroke="currentColor" stroke-width="5"/><circle cx="60" cy="52" r="17" stroke="currentColor" stroke-width="5"/></svg></div>
+        <div class="art-readout"><span class="readout-dot"></span><div><small>ESTADO DEL RODAMIENTO</small><strong>Dentro de parámetros</strong></div><b>84<span>%</span></b></div>
+        <div class="art-coordinate">LC–04 / PLANTA NORTE</div>
+      </div>
+      <div class="hero-foot"><span>PLATAFORMA DE CONFIABILIDAD INDUSTRIAL</span><span>01 — 03</span></div>
+    </section>
+
+    <section class="workspace-section" id="evaluador" data-module="evaluacion" hidden>
+      <div class="section-heading">
+        <div><div class="eyebrow dark-eyebrow"><span class="eyebrow-line"></span> CENTRO DE DECISIÓN</div><h2>Evaluador de piezas</h2><p>Registra la condición del componente para obtener un dictamen de mantenimiento.</p></div>
+        <button class="text-button back-to-intro" id="back-to-evaluador" type="button">← Volver a presentación</button>
+      </div>
+      <div class="evaluation-layout">
+        <form class="evaluation-card" id="evaluation-form">
+          <div class="card-heading"><span class="step-number">01</span><div><h3>Datos del componente</h3><p>Completa los datos de inspección en campo.</p></div></div>
+          <div class="form-grid">
+            <label class="field field-wide">Buscar pieza por nombre o referencia
+              <input id="component-search" type="search" placeholder="Ej. rodamiento, ISO 3408, mechanical-01" autocomplete="off" disabled>
+            </label>
+            <label class="field field-wide">Componente a evaluar
+              <span class="select-wrap"><select id="component" name="component" required disabled><option value="">Cargando repuestos...</option></select><span class="select-chevron">⌄</span></span>
+            </label>
+            <label class="field field-wide">Área de la empresa
+              <span class="select-wrap"><select id="area-select" name="areaId" required><option value="">Registra un área para seleccionarla</option></select><span class="select-chevron">⌄</span></span>
+            </label>
+            <p class="field-help field-wide">Administra las opciones en <a class="inline-link" href="#areas" id="manage-areas-link">Gestión de áreas</a>.</p>
+            <label class="field field-wide">Nombre de la máquina o equipo
+              <span class="select-wrap"><select id="machine-select" name="machineId" required disabled><option value="">Selecciona un área primero</option></select><span class="select-chevron">⌄</span></span>
+            </label>
+            <p class="field-help field-wide">Administra las máquinas disponibles desde <a class="inline-link" href="#areas" id="manage-machines-link">Gestión de áreas y máquinas</a>.</p>
+            <label class="field">Horas de operación acumuladas
+              <span class="input-wrap"><input id="hours" name="hours" type="number" min="0" max="200000" value="4000" required inputmode="numeric"><span>horas</span></span>
+              <small>Según horómetro del equipo</small>
+            </label>
+            <label class="field">Desgaste visual observado
+              <select id="wear" name="wear" required><option value="0">Sin desgaste</option><option value="1" selected>Moderado</option><option value="2">Crítico</option></select>
+              <small>Usa la guía rápida de inspección</small>
+            </label>
+          </div>
+          <div class="wear-guide">
+            <div class="guide-head"><span>GUÍA RÁPIDA DE DESGASTE</span><button type="button" class="guide-toggle" id="guide-toggle" aria-expanded="false">Ver criterios <span>＋</span></button></div>
+            <div class="guide-scale" aria-label="Tres niveles de desgaste"><span class="scale-dot level-1">1</span><span class="scale-track"></span><span class="scale-dot level-3">2</span><span class="scale-track"></span><span class="scale-dot level-5">3</span></div>
+            <div class="guide-labels"><span>Sin desgaste</span><span>Crítico</span></div>
+            <div class="guide-details" id="guide-details" hidden><div><b>1 · Sin desgaste</b> Sin anomalías visibles; superficie en condición normal.</div><div><b>2 · Moderado</b> Desgaste visible; programar seguimiento e inspección.</div><div><b>3 · Crítico</b> Grietas, deformación, daño avanzado o juego excesivo.</div></div>
+          </div>
+          <div class="form-footer"><span><span class="required-mark">*</span> Campos obligatorios</span><button class="button button-primary evaluate-button" type="submit"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M9 2v3m0 8v3M2 9h3m8 0h3M3.8 3.8l2.1 2.1m6.2 6.2 2.1 2.1m0-10.4-2.1 2.1m-6.2 6.2-2.1 2.1" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="9" cy="9" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg> Generar dictamen <span aria-hidden="true">→</span></button></div>
+        </form>
+
+        <section class="result-card result-good" id="result-card" aria-live="polite">
+          <div class="result-topline"><span><i class="result-indicator"></i> DICTAMEN TÉCNICO</span><span class="result-code" id="result-code">LC-2026-0842</span></div>
+          <div class="result-main">
+            <div class="life-gauge" id="life-gauge" style="--life: 62"><div class="gauge-inner"><strong id="remaining-value">62<span>%</span></strong><small>VIDA RESTANTE</small></div></div>
+            <div class="recommendation"><span class="recommendation-label">RECOMENDACIÓN</span><h3 id="recommendation-title">Apto para preventivo</h3><p id="recommendation-copy">El componente puede continuar en operación. Mantén su inspección dentro del plan preventivo.</p></div>
+          </div>
+          <div class="result-divider"></div>
+          <div class="result-metrics"><div><small>COMPONENTE</small><strong id="result-component">—</strong></div><div><small>PRÓXIMA REVISIÓN</small><strong id="next-inspection">—</strong></div><div><small>ÁREA · MÁQUINA</small><strong id="result-location">—</strong></div></div>
+          <div class="result-note"><span class="note-icon">i</span><span>Estimación orientativa basada en vida nominal y observación visual. Confirma el diagnóstico con inspección técnica y manual del fabricante.</span></div>
+        </section>
+      </div>
+      <div class="method-note"><span class="method-icon">↗</span><span><strong>¿Cómo se calcula?</strong> La estimación combina horas registradas, vida nominal del componente y nivel de desgaste informado. No sustituye una inspección especializada.</span></div>
+    </section>
+
+    <section class="catalog-section" id="catalogo" data-module="catalogo" hidden>
+      <div class="section-heading compact-heading">
+        <div><div class="eyebrow dark-eyebrow"><span class="eyebrow-line"></span> CATÁLOGO TÉCNICO</div><h2>Repuestos y componentes</h2><p>Busca por nombre o familia y consulta la vida útil aproximada de referencia.</p></div>
+        <span class="catalog-count" id="catalog-count" aria-live="polite">60 COMPONENTES</span>
+      </div>
+      <div class="catalog-tools">
+        <label class="catalog-search">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.7" cy="8.7" r="5.8" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m13 13 4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <span class="visually-hidden">Buscar repuesto</span>
+          <input id="catalog-search" type="search" placeholder="Buscar repuesto o sistema..." autocomplete="off">
+        </label>
+        <label class="catalog-filter-label" for="catalog-category">Familia</label>
+        <select id="catalog-category" class="catalog-filter">
+          <option value="">Todas las familias</option>
+          <option value="mechanical">Sistema mecánico y transmisión</option>
+          <option value="sealing">Estanqueidad, sellado y fluidos</option>
+          <option value="hydraulic">Sistemas neumáticos e hidráulicos</option>
+          <option value="electrical">Sistemas eléctricos, electrónicos y control</option>
+          <option value="thermal">Elementos térmicos y calentamiento</option>
+          <option value="machining">Mecanizados, utillaje y desgaste</option>
+          <option value="structure">Amortiguación, estructura y seguridad</option>
+        </select>
+      </div>
+      <div class="catalog-grid" id="catalog-grid" aria-live="polite"></div>
+      <p class="catalog-disclaimer">Vidas útiles orientativas provisionales, no certificadas por fabricante; deben validarse según carga, lubricación, ambiente y recomendaciones del fabricante. La disponibilidad física debe confirmarse con el almacén.</p>
+    </section>
+
+    <section class="audit-section" id="historial" data-module="historial" hidden>
+      <div class="section-heading compact-heading">
+        <div><div class="eyebrow dark-eyebrow"><span class="eyebrow-line"></span> TRAZABILIDAD</div><h2>Historial de auditoría</h2><p>Evaluaciones persistentes de tu cuenta con pieza, área y equipo asociados.</p></div>
+        <button class="text-button" id="clear-history" type="button">Limpiar historial <span aria-hidden="true">↗</span></button>
+      </div>
+      <div class="table-wrap"><table class="audit-table"><thead><tr><th>FECHA Y HORA</th><th>PIEZA</th><th>REFERENCIA</th><th>ÁREA</th><th>MÁQUINA / EQUIPO</th><th>HORAS</th><th>DESGASTE</th><th>DICTAMEN</th><th>VIDA RESTANTE</th><th>TÉCNICO</th></tr></thead><tbody id="audit-rows"></tbody></table><div class="empty-history" id="empty-history">No hay evaluaciones registradas en tu cuenta.</div></div>
+    </section>
+
+    <section class="reports-section" id="reportes" data-module="reportes" hidden>
+      <div class="section-heading compact-heading">
+        <div><div class="eyebrow dark-eyebrow"><span class="eyebrow-line"></span> ANÁLISIS Y EXPORTACIÓN</div><h2>Reportes</h2><p>Filtra tus evaluaciones y exporta los resultados a CSV.</p></div>
+        <button class="button button-primary report-export" id="export-report" type="button" disabled>Exportar CSV <span aria-hidden="true">↓</span></button>
+      </div>
+      <div class="report-filters">
+        <label>Desde<input id="report-from" type="date"></label>
+        <label>Hasta<input id="report-to" type="date"></label>
+        <label>Dictamen<select id="report-status"><option value="">Todos los dictámenes</option><option value="result-good">Apto para preventivo</option><option value="result-warn">Reacondicionar</option><option value="result-critical">Reemplazo inmediato</option></select></label>
+        <span class="report-count" id="report-count" aria-live="polite">0 registros</span>
+      </div>
+      <p class="area-message report-message" id="report-message" role="alert" hidden></p>
+      <div class="table-wrap"><table class="audit-table"><thead><tr><th>FECHA Y HORA</th><th>CÓDIGO</th><th>COMPONENTE</th><th>ÁREA · MÁQUINA</th><th>DICTAMEN</th><th>VIDA RESTANTE</th><th>TÉCNICO</th></tr></thead><tbody id="report-rows"></tbody></table><p class="empty-history" id="report-empty">No hay datos que coincidan con los filtros.</p></div>
+    </section>
+
+    <section class="areas-section" id="areas" data-module="areas" hidden>
+      <div class="section-heading compact-heading">
+        <div><div class="eyebrow dark-eyebrow"><span class="eyebrow-line"></span> CONFIGURACIÓN DE PLANTA</div><h2>Áreas y máquinas</h2><p>Administra las áreas y sus equipos. Solo las máquinas registradas estarán disponibles al evaluar.</p></div>
+      </div>
+      <div class="areas-layout">
+        <div class="area-management-forms">
+          <form class="area-form" id="area-form">
+            <h3>Registrar área</h3>
+            <label class="field" for="area-name">Nombre del área
+              <input id="area-name" name="areaName" type="text" required minlength="2" maxlength="80" placeholder="Ej. Producción norte">
+            </label>
+            <p class="area-message" id="area-message" role="alert" hidden></p>
+            <button class="button button-primary" type="submit">Agregar área <span aria-hidden="true">→</span></button>
+          </form>
+          <form class="machine-form" id="machine-form">
+            <h3>Registrar máquina o equipo</h3>
+            <label class="field">Área
+              <span class="select-wrap"><select id="machine-area-select" name="areaId" required><option value="">Registra un área primero</option></select><span class="select-chevron">⌄</span></span>
+            </label>
+            <label class="field" for="machine-name">Nombre de la máquina
+              <input id="machine-name" name="machineName" type="text" required minlength="2" maxlength="100" placeholder="Ej. Bomba centrífuga P-01">
+            </label>
+            <p class="area-message" id="machine-message" role="alert" hidden></p>
+            <button class="button button-primary" type="submit">Agregar máquina <span aria-hidden="true">→</span></button>
+          </form>
+        </div>
+        <section class="area-list-card" aria-labelledby="area-list-title">
+          <div class="area-list-heading"><h3 id="area-list-title">Áreas registradas</h3><span id="area-count">0</span></div>
+          <ul class="area-list" id="area-list"></ul>
+          <p class="area-empty" id="area-empty">Todavía no hay áreas. Registra una para poder evaluar piezas.</p>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" hidden><a class="footer-brand" href="#inicio">LiveCycle</a><span>Confiabilidad para cada ciclo de vida.</span><span>© 2026 · Plataforma de ingeniería industrial</span></footer>
+
+  <div class="modal-backdrop" id="profile-modal" hidden>
+    <section class="profile-modal" role="dialog" aria-modal="true" aria-labelledby="profile-title">
+      <div class="modal-heading"><div><div class="eyebrow dark-eyebrow"><span class="eyebrow-line"></span> CUENTA DE PLANTA</div><h2 id="profile-title">Perfil del técnico</h2><p>Los datos se guardan en este dispositivo.</p></div><button class="modal-close" id="profile-close" type="button" aria-label="Cerrar">×</button></div>
+      <form id="profile-form" class="profile-form">
+        <label class="field">Nombres<input name="firstName" required readonly></label><label class="field">Apellidos<input name="lastName" readonly></label>
+        <label class="field">Cédula<input name="idNumber" readonly></label><label class="field">Correo electrónico<input name="email" type="email"></label>
+        <label class="field">Cargo<input name="role" required></label><label class="field">Turno laboral<select name="shift"><option>Turno A</option><option>Turno B</option><option>Turno C</option><option>Administrativo</option></select></label>
+        <label class="field">Departamento<input name="department" required></label>
+        <label class="field">Área de trabajo<input name="workArea" required></label>
+        <div class="modal-actions"><button class="button button-secondary" id="profile-cancel" type="button">Cancelar</button><button class="button button-primary" type="submit">Guardar perfil <span aria-hidden="true">→</span></button></div>
+      </form>
+    </section>
+  </div>
+</body>
+</html>
